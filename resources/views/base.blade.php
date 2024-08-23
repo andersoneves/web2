@@ -10,21 +10,24 @@
 <body>
 		<ul class="navbar navbar-expand-lg bg-body-tertiary">
 	  		<div class="nav-item">
-	    		<a class="navbar-brand " aria-current="page" href="#">Pessoas</a>
+	    		<a class="navbar-brand" href="{{url('pessoas')}}">Pessoas</a>
 	  		</div>
 	 		 <div class="nav-item">
-	    		<a class="navbar-brand active" href="#">Produtos</a>
+	    		<a class="navbar-brand active" href="{{url('produtos')}}">Produtos</a>
 	  		</div>
 	  		<div class="nav-item">
-	    		<a class="navbar-brand" href="#">link</a>
+	    		<a class="navbar-brand" href="{{url('produtos/cadastro')}}">Cadastro Produto</a>
 	  		</div>
 		</ul>
+
 	<div class="row">
 		<div class="col-10 offset-1" style="min-height: 60vw;; background-color:#e9e9e9;    ">
 			@yield('main')
 		</div>
 		
 	</div>	
-	
+	<footer style="background-color: black; color: white; text-align: center; min-height: 50px; padding: 20px">
+		 Web2 
+	</footer>
 </body>
 </html>

@@ -11,4 +11,11 @@ class ProdutoController extends Controller
     public function index(){
     	return view("ListaProduto",["produtos"=>Produto::orderBy('name')->get()]); 
     } 
+
+    public function cadastro(){
+    	return view("cadastro");
+    }
+
+
+
 }
