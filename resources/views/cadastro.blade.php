@@ -2,7 +2,7 @@
 @section('main')
 <div>
     <form method="POST" action="{{url('/produtos/salvar')}}">
-
+    	@csrf
     	<div class="row">
     		<label class="col-4 offset-4">Nome</label>
     		<input class="col-4 offset-4" type="text" name="nome">
