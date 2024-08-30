@@ -32,6 +32,17 @@ class ProdutoController extends Controller
         
     }
 
+    public function atualizar(Request $request,int $id){
+        $produto=Produto::find($id);
+        $produto->name=$request->nome;
+        $produto->descricao=$request->descricao;
+        $produto->preco=$request->preco;
+        $produto->save();
+
+        return view("ListaProduto",["produtos"=>Produto::orderBy('name')->get()])->with("mensagem",(object)["texto"=>"Dados editados com sucesso","classe"=>"bg-success"]);
+
+    }
+
     public function excluir(int $id){
         return $id;
     }

@@ -13,6 +13,7 @@ class Produto extends Model
         'name',
         'descricao',
         'preco',
+        'updated_at',
     ];
 
     	

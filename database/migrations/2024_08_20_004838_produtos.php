@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->longText('descricao');
             $table->double('preco');
+            $table->date('updated_at');
         });
     }
 
