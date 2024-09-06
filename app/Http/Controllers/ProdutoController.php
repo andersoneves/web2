@@ -44,6 +44,9 @@ class ProdutoController extends Controller
     }
 
     public function excluir(int $id){
-        return $id;
+        $produto=Produto::find($id);
+        $produto->delete();
+
+        return view("ListaProduto",["produtos"=>Produto::orderBy('name')->get()])->with("mensagem",(object)["texto"=>"Dados removidos com sucesso","classe"=>"bg-success"]);;
     }
 }

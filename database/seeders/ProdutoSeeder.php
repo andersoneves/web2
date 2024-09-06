@@ -17,6 +17,7 @@ class ProdutoSeeder extends Seeder
             'name' => "Arroz",
             'descricao' => "Arroz branco",
             'preco' => 12.25,
+            'updated_at'=>null,
         ]);
     }
 }

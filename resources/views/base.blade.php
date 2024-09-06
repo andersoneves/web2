@@ -17,6 +17,16 @@
 				$( ".collapse" ).fadeIn( 700 ).delay(600).slideUp( 700 );
 
 			}
+
+			$(".btn-danger").click(function(e){
+				e.preventDefault();
+				produto=$(".btn-danger").closest(".row").find("div")[0].innerText;
+				r=confirm("deseja mesmo excluir o Produto "+produto+" ?");
+				if(r){
+					
+					$(this).unbind('click').click();
+				}
+			});
 		});
 
 	</script>
